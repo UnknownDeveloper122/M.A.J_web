@@ -1,0 +1,180 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('images/nonback.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+header {
+    background: linear-gradient(90deg, #020202, #464646);
+    color: white;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+header img {
+    height: 80px;
+    width: auto;
+}
+
+.header1 {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    font-family: Roboto, sans-serif;
+    text-decoration: underline;
+    font-style: italic;
+}
+
+.back-button {
+    color: rgb(255, 2, 2);
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: #000000;
+    border-radius: 5px;
+    border: 2px solid rgb(255, 255, 255);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: rgb(208, 255, 0);
+    transform: scale(1.1);
+}
+
+h1 {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.vertical-text {
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    color: white;
+    margin-top: 20px;
+    margin-left: 20px
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    line-height: 1.5;
+}
+
+.photo-collage {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.photo-item {
+    position: relative;
+    overflow: visible; /* Allow the photo to expand outside its container */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover img {
+    position: absolute; /* Make the photo float above the collage */
+    transform: scale(1.5); /* Enlarge the photo */
+    z-index: 10; /* Bring the hovered photo to the front */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Add a stronger shadow */
+    width: 150%;
+    height: auto;
+}
+
+.photo-collage2 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+}
+
+.photo-item {
+    position: relative;
+    overflow: visible; /* Allow the photo to expand outside its container */
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover img {
+    position: absolute; /* Make the photo float above the collage */
+    transform: scale(1.5); /* Enlarge the photo */
+    z-index: 10; /* Bring the hovered photo to the front */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.6); /* Add a stronger shadow */
+    width: 150%;
+    height: auto;
+}
+
+footer {
+    background: linear-gradient(90deg, #020202, #464646);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.2);
+}
+
+footer a {
+    color: rgb(230, 255, 2);
+    text-decoration: none;
+    margin: 0 5px;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: rgb(255, 0, 0);
+    text-decoration: underline;
+}
+
